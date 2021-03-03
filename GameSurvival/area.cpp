@@ -33,12 +33,12 @@ void area::OutPut()
 			else if (j == 0 || j == sizex - 1) {
 				cout << char(219)<<char(219);
 			}
-			else if (p.GetX() == j && p.GetY() == i) { cout << char(219) << char(219); }
+			else if (p.Getx() == j && p.Gety() == i) { cout << char(219) << char(219); }
 			else cout << "  ";
 		}
 		cout << endl;
 	}
-	cout << p.GetX() << p.GetY();
+	cout << p.Getx() << p.Gety();
 }
 
 player area::GetPlayer()

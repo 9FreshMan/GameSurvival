@@ -1,16 +1,16 @@
 #pragma once
-#include "character.h"
-class enemy : public character
+class enemy
 {
-	private:
-
-	public:
-		enemy();
-		void SetX(const int x);
-		void SetY(const int y);
-		int GetX();
-		int GetY();
-		int GetHealth();
-		void SetHealth(const int h);
+	int x;
+	int y;
+	int health;
+public:
+	enemy();
+	int Getx();
+	int Gety();
+	int GetHealth();
+	void Setx(const int userx);
+	void Sety(const int usery);
+	void SetHealth(const int user);
 };
 
