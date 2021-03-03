@@ -6,7 +6,7 @@ enemy::enemy()
 	y = 90;
 	health = 100;
 }
-
+//hello
 int enemy::Getx()
 {
 	return x;
