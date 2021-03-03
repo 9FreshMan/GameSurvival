@@ -4,6 +4,7 @@ using namespace std;
 
 area::area()
 {
+	cout << "sfd";
 	sizex = 20;
 	sizey = 20;
 	map = new char*[sizex];
