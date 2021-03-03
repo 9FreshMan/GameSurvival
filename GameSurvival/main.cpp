@@ -101,8 +101,6 @@ int main() {
 	
 	setcur(0, 0);
 		g.inp();
-
-
 	}
 
 	return 0;
