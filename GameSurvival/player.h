@@ -3,6 +3,7 @@
 class player :
 	public character
 {
+
 public:
 	player() :character()
 	{

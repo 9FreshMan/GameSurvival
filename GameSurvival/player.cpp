@@ -31,5 +31,5 @@ void player::SetX(const int userx)
 
 void player::SetY(const int usery)
 {
-	y= usery;
+	y = usery;
 }
