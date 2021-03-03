@@ -1,21 +1,16 @@
 #pragma once
-#include "character.h"
-class player :
-	public character
+class player
 {
-
+	int x;
+	int y;
+	int health;
 public:
-	player() :character()
-	{
-		health = 100;
-		x = 12;
-		y = 14;
-	}
-	void SetHealth(const int user);
+	player();
+	int Getx();
+	int Gety();
 	int GetHealth();
-	int GetX();
-	int GetY();
-	void SetX(const int userx);
-	void SetY(const int usery);
+	void Setx(const int userx);
+	void Sety(const int usery);
+	void SetHealth(const int user);
 };
 

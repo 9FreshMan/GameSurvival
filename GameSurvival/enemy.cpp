@@ -1,11 +1,20 @@
 #include "enemy.h"
 
-
-enemy::enemy():character()
+enemy::enemy()
 {
+	x = 10;
+	y = 10;
 	health = 100;
-	x = 0;
-	y = 0;
+}
+
+int enemy::Getx()
+{
+	return x;
+}
+
+int enemy::Gety()
+{
+	return y;
 }
 
 int enemy::GetHealth()
@@ -13,27 +22,17 @@ int enemy::GetHealth()
 	return health;
 }
 
-int enemy::GetX()
+void enemy::Setx(const int userx)
 {
-	return x;
+	x = userx;
 }
 
-int enemy::GetY()
+void enemy::Sety(const int usery)
 {
-	return y;
+	y = usery;
 }
 
-void enemy::SetHealth(const int h)
+void enemy::SetHealth(const int user)
 {
-	health = h;
-}
-
-void enemy::SetX(const int x)
-{
-	this -> x = x;
-}
-
-void enemy::SetY(const int y)
-{
-	this -> y = y;
+	health = user;
 }

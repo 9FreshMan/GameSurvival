@@ -19,10 +19,10 @@ void game::inp()
 	while (_kbhit()) {
 		switch (_getch())
 		{
-		case 'a': {a.GetPlayer().SetX(5); break; }
-		case 'd': {a.GetPlayer().SetX(a.GetPlayer().GetX() - 1); break; }
+		case 'a': {a.GetPlayer().Setx(5); break;  }
+		/*case 'd': {a.GetPlayer().SetX(a.GetPlayer().GetX() - 1); break; }
 		case 'w': {a.GetPlayer().SetY(a.GetPlayer().GetY() - 1); break; }
-		case 's': {a.GetPlayer().SetY(a.GetPlayer().GetY() + 1); break; }
+		case 's': {a.GetPlayer().SetY(a.GetPlayer().GetY() + 1); break; }*/
 		}
 	}
 }

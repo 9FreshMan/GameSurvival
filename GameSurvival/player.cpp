@@ -1,8 +1,20 @@
 #include "player.h"
 
-void player::SetHealth(const int user)
+player::player()
 {
-	health = user;
+	x = 10;
+	y = 10;
+	health = 100;
+}
+
+int player::Getx()
+{
+	return x;
+}
+
+int player::Gety()
+{
+	return y;
 }
 
 int player::GetHealth()
@@ -10,26 +22,17 @@ int player::GetHealth()
 	return health;
 }
 
-int player::GetX()
+void player::Setx(const int userx)
 {
-	return x;
-}
-
-int player::GetY()
-{
-	return y;
-}
-
-
-void player::SetX(const int userx)
-{
-
 	x = userx;
-}	 
+}
 
-
-
-void player::SetY(const int usery)
+void player::Sety(const int usery)
 {
 	y = usery;
+}
+
+void player::SetHealth(const int user)
+{
+	health = user;
 }
