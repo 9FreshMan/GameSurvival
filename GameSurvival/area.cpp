@@ -23,6 +23,7 @@ area::~area()
 
 void area::OutPut()
 {
+	p.Setx(11);
 	for (int i = 0; i < sizey; i++) {
 	
 		for (int j = 0; j < sizex; j++) {

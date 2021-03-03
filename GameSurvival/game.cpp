@@ -16,6 +16,7 @@ void game::out()
 
 void game::inp()
 {
+	a.GetPlayer().Setx(15);
 	while (_kbhit()) {
 		switch (_getch())
 		{
