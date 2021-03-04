@@ -12,6 +12,6 @@ public:
 	area();
 	~area();
 	void OutPut();
-	player GetPlayer();
+	player& GetPlayer();
 };
 
