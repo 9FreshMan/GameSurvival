@@ -9,5 +9,6 @@ public:
 	game();
 	void out();
 	void inp();
+	void WorldGeneration();
 };
 

@@ -5,6 +5,7 @@
 using namespace std;
 game::game()
 {
+	
 }
 void game::out()
 {
@@ -39,4 +40,9 @@ void game::inp()
 		case 32: {a.GetPlayer().Sety(a.GetPlayer().Gety() - 3); break; }
 		}
 	}
+}
+
+void game::WorldGeneration()
+{
+	a.Worldgeneration();
 }

@@ -103,8 +103,11 @@ void fontsize(int a, int b) {
 	SetCurrentConsoleFontEx(out, 0, lpConsoleCurrentFontEx);
 }
 int main() {
-	//fontsize(10, 10);
+	fontsize(5, 5);
 	game g;
+	for (int i = 0; i < 5; i++) {
+		g.WorldGeneration();
+	}
 	while (true)
 	{
 	g.out();
