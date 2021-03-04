@@ -1,5 +1,6 @@
 #include "area.h"
 #include <iostream>
+#include "time.h"
 using namespace std;
 
 area::area()
@@ -7,7 +8,7 @@ area::area()
 	sizex = 200;
 	sizey = 20;
 	cameraviewx1 = 0;
-	cameraviewx2 = 10;
+	cameraviewx2 = 50;
 	map = new char*[sizey];
 	for (int i=0; i<sizey; i++)
 	{
@@ -53,7 +54,17 @@ player& area::GetPlayer()
 
 void area::Worldgeneration()
 {
-
+	srand(time(NULL));
+	
+	for (int i = 0; i < sizey; i++) {
+		for (int j = 0; j < sizex; j++) {
+			if (map[i][j] == char(219)&&map[i-1][j]!=char(219)) {
+				int random = rand() % 2;
+				if (random == 1) { map[i - 1][j] = char(219); }
+				
+			}
+		}
+	}
 }
 
 char** area::GetMap()
