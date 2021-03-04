@@ -91,16 +91,26 @@ void setcur(int x, int y)//установка курсора на позицию
 252№
 253¤
 254■
+
 */
+void fontsize(int a, int b) {
+	HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+	PCONSOLE_FONT_INFOEX lpConsoleCurrentFontEx = new CONSOLE_FONT_INFOEX();
+	lpConsoleCurrentFontEx->cbSize = sizeof(CONSOLE_FONT_INFOEX);
+	GetCurrentConsoleFontEx(out, 0, lpConsoleCurrentFontEx);
+	lpConsoleCurrentFontEx->dwFontSize.X = a;
+	lpConsoleCurrentFontEx->dwFontSize.Y = b;
+	SetCurrentConsoleFontEx(out, 0, lpConsoleCurrentFontEx);
+}
 int main() {
+	//fontsize(10, 10);
 	game g;
-	
 	while (true)
 	{
 	g.out();
-	
 	setcur(0, 0);
-		g.inp();
+	g.inp();
+	Sleep(50);
 	}
 
 	return 0;
