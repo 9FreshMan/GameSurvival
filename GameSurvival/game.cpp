@@ -1,5 +1,4 @@
 #include "game.h"
-#include "area.h"
 #include <conio.h>
 #include <Windows.h>
 #include <iostream>
@@ -16,14 +15,13 @@ void game::out()
 
 void game::inp()
 {
-	a.GetPlayer().Setx(15);
 	while (_kbhit()) {
 		switch (_getch())
 		{
-		case 'a': {a.GetPlayer().Setx(5); break;  }
-		/*case 'd': {a.GetPlayer().SetX(a.GetPlayer().GetX() - 1); break; }
-		case 'w': {a.GetPlayer().SetY(a.GetPlayer().GetY() - 1); break; }
-		case 's': {a.GetPlayer().SetY(a.GetPlayer().GetY() + 1); break; }*/
+		case 'a': {a.GetPlayer().Setx(a.GetPlayer().Getx() - 1); break; }
+		case 'd': {a.GetPlayer().Setx(a.GetPlayer().Getx() + 1); break; }
+		case 'w': {a.GetPlayer().Sety(a.GetPlayer().Gety() - 1); break; }
+		case 's': {a.GetPlayer().Sety(a.GetPlayer().Gety() + 1); break; }
 		}
 	}
 }

@@ -4,7 +4,6 @@ using namespace std;
 
 area::area()
 {
-	cout << "sfd";
 	sizex = 20;
 	sizey = 20;
 	map = new char*[sizex];
@@ -24,7 +23,6 @@ area::~area()
 
 void area::OutPut()
 {
-	p.Setx(11);
 	for (int i = 0; i < sizey; i++) {
 	
 		for (int j = 0; j < sizex; j++) {
@@ -43,7 +41,7 @@ void area::OutPut()
 	cout << p.Getx() << p.Gety();
 }
 
-player area::GetPlayer()
+player& area::GetPlayer()
 {
 	return p;
 }
