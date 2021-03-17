@@ -10,5 +10,7 @@ public:
 	void out();
 	void inp();
 	void WorldGeneration();
+	void EnemyWalk();
+	void EnemyPunch();
 };
 

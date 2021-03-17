@@ -103,19 +103,18 @@ void fontsize(int a, int b) {
 	SetCurrentConsoleFontEx(out, 0, lpConsoleCurrentFontEx);
 }
 int main() {
-	fontsize(5, 5);
+	fontsize(20, 20);
 	game g;
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 2; i++) {
 		g.WorldGeneration();
 	}
 	while (true)
 	{
-	g.out();
-	setcur(0, 0);
-	g.inp();
-	Sleep(50);
+		g.out();
+		setcur(0, 0);
+		g.inp();
+		Sleep(75);
 	}
 
 	return 0;
 }
-//Hello, there is new code!!!
