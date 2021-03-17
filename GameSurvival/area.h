@@ -3,7 +3,7 @@
 #include "enemy.h"
 class area
 {
-	
+
 	player p;
 	enemy e;
 	char** map;
@@ -17,6 +17,7 @@ public:
 	~area();
 	void OutPut();
 	player& GetPlayer();
+	enemy& GetEnemy();
 	void Worldgeneration();
 	char** GetMap();
 	void SetSizex(const int user);
@@ -27,5 +28,7 @@ public:
 	int GetCameraViewEnd();
 	void SetCameraViewBegin(const int user);
 	void SetCameraViewEnd(const int user);
+
+	void EnemyGeneration();
 };
 

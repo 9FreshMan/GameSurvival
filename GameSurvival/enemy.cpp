@@ -2,8 +2,8 @@
 
 enemy::enemy()
 {
-	x = 10;
-	y = 90;
+	x = 20;
+	y = 10;
 	health = 100;
 }
 //hello
