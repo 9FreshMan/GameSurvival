@@ -36,12 +36,32 @@ void game::inp()
 		switch (_getch())
 		{
 		case 'a': {
-			if (a.GetMap()[a.GetPlayer().Gety()][a.GetPlayer().Getx() - 1] == char(219)) { break; }
+			if (a.GetMap()[a.GetPlayer().Gety()][a.GetPlayer().Getx() - 1] == char(219) && a.GetMap()[a.GetPlayer().Gety() - 1][a.GetPlayer().Getx() - 1] == char(219)) {
+				break;
+			}
+			if (a.GetMap()[a.GetPlayer().Gety()][a.GetPlayer().Getx() - 1] == char(219)&& a.GetMap()[a.GetPlayer().Gety()-1][a.GetPlayer().Getx() - 1] == ' ') {
+				a.SetCameraViewBegin(a.GetCameraViewBegin() - 1);
+				a.SetCameraViewEnd(a.GetCameraViewEnd() - 1);
+				a.GetPlayer().Setx(a.GetPlayer().Getx() - 1); 
+				a.GetPlayer().Sety(a.GetPlayer().Gety() - 1); 
+				break;
+			
+			}
 			a.SetCameraViewBegin(a.GetCameraViewBegin() - 1);
 			a.SetCameraViewEnd(a.GetCameraViewEnd() - 1);
 			a.GetPlayer().Setx(a.GetPlayer().Getx() - 1); break; }
 		case 'd': {
-			if (a.GetMap()[a.GetPlayer().Gety()][a.GetPlayer().Getx() + 1] == char(219)) { break; }
+			if (a.GetMap()[a.GetPlayer().Gety()][a.GetPlayer().Getx() + 1] == char(219) && a.GetMap()[a.GetPlayer().Gety() - 1][a.GetPlayer().Getx() + 1] == char(219)) {
+			break;
+		}
+			if (a.GetMap()[a.GetPlayer().Gety()][a.GetPlayer().Getx() + 1] == char(219) && a.GetMap()[a.GetPlayer().Gety() - 1][a.GetPlayer().Getx() + 1] == ' ') {
+				a.SetCameraViewBegin(a.GetCameraViewBegin() + 1);
+				a.SetCameraViewEnd(a.GetCameraViewEnd() + 1);
+				a.GetPlayer().Setx(a.GetPlayer().Getx() + 1); 
+				a.GetPlayer().Sety(a.GetPlayer().Gety() - 1); 
+				break;
+			
+			}
 			a.SetCameraViewBegin(a.GetCameraViewBegin() + 1);
 			a.SetCameraViewEnd(a.GetCameraViewEnd() + 1);
 			a.GetPlayer().Setx(a.GetPlayer().Getx() + 1); break; }
