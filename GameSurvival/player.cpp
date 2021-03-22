@@ -28,6 +28,16 @@ int player::GetMoney()
 	return money;
 }
 
+int player::GetCountOfJumps()
+{
+	return CountOfJumps;
+}
+
+void player::SetCountOfJumps(const int user)
+{
+	CountOfJumps = user;
+}
+
 void player::Setx(const int userx)
 {
 	x = userx;

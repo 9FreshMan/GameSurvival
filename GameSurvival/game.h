@@ -4,13 +4,10 @@
 class game
 {
 	area a;
-
 public:
 	game();
 	void out();
 	void inp();
 	void WorldGeneration();
-	void EnemyWalk();
-	void EnemyPunch();
 };
 
