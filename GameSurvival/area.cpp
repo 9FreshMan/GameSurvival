@@ -7,6 +7,28 @@ using namespace std;
 
 area::area()
 {
+	shoot = new char* [20];
+	for (int i = 0; i < 20; i++) {
+		shoot[i] = new char[200];
+	}
+	for (int i = 0; i < 20; i++) {
+	
+		for (int j = 0; j < 200; j++) {
+		
+			shoot[i][j] =  ' ';
+		}
+	}
+	bot = new char* [20];
+	for (int i = 0; i < 20; i++) {
+		bot[i] = new char[200];
+	}
+	for (int i = 0; i < 20; i++) {
+
+		for (int j = 0; j < 200; j++) {
+
+			shoot[i][j] = ' ';
+		}
+	}
 	sizex = 200;
 	sizey = 20;
 	cameraviewx1 = 0;
@@ -37,6 +59,7 @@ area::~area()
 void area::OutPut()
 {
 	HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+	int k = 0;
 	for (int i = 0; i < sizey; i++) {
 		for (int j = cameraviewx1; j < cameraviewx2; j++) {
 			if (p.Getx() == j && p.Gety() == i) {
@@ -44,11 +67,8 @@ void area::OutPut()
 				cout << char(219) << char(219);
 				SetConsoleTextAttribute(h, 15);
 			}
-			else if (e.Getx() == j && e.Gety() == i) {
-				SetConsoleTextAttribute(h, 4);
-				cout << char(219) << char(219);
-				SetConsoleTextAttribute(h, 15);
-			} //show enemy
+	
+			else if (shoot[i][j] == char(253)) { cout << " "<<char(253); }
 			else if (map[i][j] == char(219)) {
 				SetConsoleTextAttribute(h, 2);
 				cout << char(219) << char(219);
@@ -64,7 +84,6 @@ void area::OutPut()
 	cout << "Health: " << p.GetHealth() << " " << endl;
 	cout << "Money: " << p.GetMoney() << " " << endl;
 
-	cout << "EX: " << e.Getx() << "\tEY: " << e.Gety() << endl;
 }
 
 player& area::GetPlayer()
@@ -72,9 +91,14 @@ player& area::GetPlayer()
 	return p;
 }
 
-enemy& area::GetEnemy()
+enemy* area::GetEnemy()
 {
 	return e;
+}
+
+char** area::GetShoot()
+{
+	return shoot;
 }
 
 void area::Worldgeneration()
@@ -136,10 +160,4 @@ void area::SetCameraViewEnd(const int user)
 	cameraviewx2 = user;
 }
 
-void area::EnemyGeneration()
-{
-	int x = rand() % 9 + 10;
-	int y = rand() % 9 + 10;
-	e.Setx(x);
-	e.Sety(y);
-}
+
