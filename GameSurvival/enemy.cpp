@@ -1,10 +1,23 @@
 #include "enemy.h"
+#include <iostream>
+#include <time.h>
+using namespace std;
 
 enemy::enemy()
 {
-	x = 10;
-	y = 10;
-	health = 100;
+	health = 10;
+	y = 5;
+	x = rand() % 180;
+}
+
+int enemy::GetHealth()
+{
+	return health;
+}
+
+void enemy::SetHealth(const int user)
+{
+	health = user;
 }
 
 int enemy::Getx()
@@ -17,22 +30,13 @@ int enemy::Gety()
 	return y;
 }
 
-int enemy::GetHealth()
+void enemy::Setx(const int user)
 {
-	return health;
+	x = user;
 }
 
-void enemy::Setx(const int userx)
+void enemy::Sety(const int user)
 {
-	x = userx;
+	y = user;
 }
 
-void enemy::Sety(const int usery)
-{
-	y = usery;
-}
-
-void enemy::SetHealth(const int user)
-{
-	health = user;
-}
