@@ -4,7 +4,6 @@
 class area
 {
 	char** shoot;
-	char** bot;
 	player p;
 	enemy* e;
 	char** map;
@@ -12,7 +11,6 @@ class area
 	int sizey;
 	int cameraviewx1;
 	int cameraviewx2;
-
 public:
 	area();
 	~area();
@@ -20,6 +18,7 @@ public:
 	player& GetPlayer();
 	enemy* GetEnemy();
 	char** GetShoot();
+	void SetShoot(int i, int j, char user);
 	void Worldgeneration();
 	char** GetMap();
 	void SetSizex(const int user);

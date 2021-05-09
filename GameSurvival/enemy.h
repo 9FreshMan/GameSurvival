@@ -1,13 +1,16 @@
 #pragma once
 class enemy
 {
-	bool spawned;
+	int x;
+	int y;
 	int health;
 public:
 	enemy();
 	int GetHealth();
 	void SetHealth(const int user);
-	bool GetSpawned();
-	void SetSpawned(const bool user);
+	int Getx();
+	void Sety(const int  user);
+	int Gety();
+	void Setx(const int  user);
 };
 
